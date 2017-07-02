@@ -1,11 +1,26 @@
 " Check vim version with $(vim --version), otherwise you may be dissapointed
 " Utilize system clipboard with "* register. (needs +clipboard in version)
 
+colo elflord
 let mapleader = ","
 filetype plugin on
+" Remove files from netrw listing
 let g:netrw_list_hide = '.*\.pyc$,.*\.png'
+" Fix how new files are opened (keep netrw topleft)
 let g:netrw_altv = 1
 let g:netrw_alto = 1
+" Turn off the banner
+let g:netrw_banner = 0
+" Open new files in previous buffer
+let g:netrw_browse_split = 4
+let g:netrw_liststyle = 3
+" When opening file, leave 30% of split for netrw
+let g:netrw_winsize = 30
+" Display directories first
+let g:netrw_sort_sequence='[\/]$'
+" Case insensitive sorting
+let g:netrw_sort_options='i'
+" Allow gx to open html with default command
 let g:netrw_browsex_viewer="xdg-open"
 
 

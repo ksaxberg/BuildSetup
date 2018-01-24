@@ -1,4 +1,12 @@
 #!/bin/bash
+# TODO: Respect existing files, don't just overwrite things
+# How about you make the backup first
+if [ ! -f ~/.vimrc.backup ]; then
+    cp ~/.vimrc ~/.vimrc.backup
+fi
+if [ ! -f ~/.tmux.backup ]; then
+    cp ~/.tmux ~/.tmux.backup
+fi
 
 # Overwrite vimrc
 cp vimrc ~/.vimrc
